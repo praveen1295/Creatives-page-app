@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creatives</title>
+    <link rel="icon" href="./images/1f3a8.svg">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://kit.fontawesome.com/d44a5a5439.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <center>
+            <h1 class="mainHeading">Create Your creatives</h1>
+        </center>
+        <hr>
+        <br>
+        <h1 class="heading">Filter By:</h1>
+        <br>
+        <div class="colorContainer">
+            <div class="clrBox">
+                <h3 class="clrHeading">color:</h3>
+                <div class="chooseClr" id="chooseClr">
+
+                </div>
+            </div>
+            <div class="searchBox">
+                <h2>title/subtitle</h2>
+                <input placeholder="search across title and subtitle" type="search" class="searchInput" name="clrInput"
+                    id="searchInput">
+            </div>
+        </div>
+
+        <div class="progressBox">
+            <input type="range" min="0" max="100" value='0' class="progressBar" id="progressBar">
+            <h3 class="prorgress"><span id="progressStatus">0</span>/5 <span>creatives</span></h3>
+        </div>
+
+        <button class="addCreativeBtn" id="addCreativeBtn">+ Add Creative</button>
+
+        <div class="itemsContainer" id="itemsContainer"></div>
+    </div>
+
+
+    <!-- drawer start -->
+
+    <form class="drawerContainer" id="drawerContainer">
+        <h1>Creative Creation</h1>
+        <span class="crossBtn" id="crossBtn"><i class="fa-solid fa-xmark"></i></span>
+        <div class="drawerInput">
+            <label class="drawerLabel" for="">title</label>
+            <input type="text" class="title" id="title" placeholder="Enter title here">
+            <label id="drawerLabel" class="drawerLabel" for="">subtitle</label>
+            <input placeholder="Enter subtitle here" class="title" id="subTitle" type="text">
+        </div>
+
+        <h2>background color</h2>
+        <div class="chooseClr" id="chooseClr1">
+
+        </div>
+        <center>
+            <button class="done" id="done">Done</button>
+        </center>
+    </form>
+    <script src="./app.js"></script>
+</body>
+
+</html>
