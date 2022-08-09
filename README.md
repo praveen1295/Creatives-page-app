@@ -1,4 +1,4 @@
-# Project Title - Creative Page
+# Project Title - Creatives Page
 
 ## Description
 
