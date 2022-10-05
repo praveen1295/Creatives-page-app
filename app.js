@@ -66,12 +66,16 @@ function createCreativeList() {
     itemsBox.id = "count";
     itemsBox.setAttribute("secColor", backgroundColor);
 
+    let deleteBtn = document.createElement("span");
+    deleteBtn.classList.add("deleteBtn");
     let title = document.createElement("h1");
-
     let subTitle = document.createElement("h3");
+
+    deleteBtn.innerText = `X`;
     title.innerText = titleText;
     subTitle.innerText = subTitleText;
 
+    itemsBox.appendChild(deleteBtn);
     itemsBox.appendChild(title);
     itemsBox.appendChild(subTitle);
     itemsBox.style.backgroundColor = backgroundColor;
@@ -154,6 +158,14 @@ function filter(searchValue) {
   }
 }
 
+const deleteCart = (element) => {
+  console.log(element);
+  count = count - 1;
+  myProgressBar.value = count * 20;
+  progressStatus.innerHTML = count;
+  element.parentElement.remove();
+};
+
 // logics
 
 document.addEventListener("click", unFilterByColor);
@@ -206,4 +218,9 @@ chooseClr1.addEventListener("click", (event) => {
 
 crossBtn.addEventListener("click", (event) => {
   hideDrawerContainer();
+});
+itemsContainer.addEventListener("click", (event) => {
+  if (event.target.tagName === "SPAN") {
+    deleteCart(event.target);
+  }
 });

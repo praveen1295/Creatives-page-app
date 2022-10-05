@@ -129,6 +129,7 @@ input[type="search"]::placeholder {
 }
 
 .itemsBox {
+  position: relative;
   margin: 10px 0;
   padding: 15px;
   border: 1px solid gray;
@@ -136,6 +137,14 @@ input[type="search"]::placeholder {
   border-radius: 5px;
   box-shadow: 1px 1px 1px black;
   word-wrap: break-word;
+}
+.deleteBtn {
+  position: absolute;
+  top: 2px;
+  right: 5px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 /* drawer start */
